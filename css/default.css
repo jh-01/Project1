@@ -95,8 +95,8 @@ body, html {
     border-radius: 5px;
 }
 
-/* 화면 너비가 1500px 이하일 때 */
-@media (max-width: 1300px) {
+/* 화면 너비가 1000px 이하일 때 */
+@media (max-width: 1000px) {
     .sidebar {
         display: none;
     }
@@ -111,7 +111,7 @@ body, html {
 }
 
 /* 화면 너비가 1500px 초과일 때: 상단 네비게이션 숨기고 좌우 사이드바 복원 */
-@media (min-width: 1301px) {
+@media (min-width: 1001px) {
     .sidebar {
         display: flex;
     }
