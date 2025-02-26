@@ -1,0 +1,23 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "커뮤니티 홈페이지",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jh-01/Project1.git"
+  },
+  "author": "jh-01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jh-01/Project1/issues"
+  },
+  "homepage": "https://github.com/jh-01/Project1#readme",
+  "dependencies": {
+    "firebase-admin": "^13.1.0",
+    "firebase-functions": "^6.3.2"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Community</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('css/images/enter_bacground.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            color: white;
+        }
+        .logo {
+            width: 300px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fantasy Community</h1>
+        <img src="css/images/logo.png" alt="로고" class="logo" onclick="location.href='index.html';">
+    </div>
+
+    <!-- 유튜브 자동 재생 -->
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/영상ID?autoplay=1&loop=1&playlist=영상ID" frameborder="0"></iframe>
+</body>
+
+<script>
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 5000); // 5초 후 메인 페이지로 이동
+</script>
+
+</html>

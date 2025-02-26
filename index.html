@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Community</title>
+    <link rel="stylesheet" href="css/default.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="js/default.js"></script>
+
+</head>
+<body>
+    <!-- <img id="bg" src="css/images/background2.png" alt="배경 이미지"> -->
+    <div id="main-content">
+        <div class="sidebar left">
+            <img src="css/images/logo.png" alt="로고">
+            <a href="index.html" class="nav-item">Main</a>
+            <a href="notice.html" class="nav-item">Notice</a>
+            <a href="#" class="nav-item">World</a>
+            <a href="#" class="nav-item">System</a>
+            <a href="#" class="nav-item">Member</a>
+            <a href="#" class="nav-item">Q&A</a>
+        </div>
+
+        <!-- 상단 네비게이션 바 -->
+        <div class="top-nav">
+            <a href="index.html">Main</a>
+            <a href="notice.html">Notice</a>
+            <a href="#">World</a>
+            <a href="#">System</a>
+            <a href="#">Member</a>
+            <a href="#">Q&A</a>
+        </div>
+
+
+        <div class="content">
+            <div class="notice">
+                <marquee scrollamount="10" id="led">신청서 접수까지 nn일 nn시간 nn분 남았습니다.</marquee>
+            </div>
+
+            <div class="blank"></div>
+
+            <div class="carousel">
+                <!-- <button class="prev" onclick="prevSlide()">&lt;</button>
+                <div class="carousel-container">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <a href="https://docs.google.com/document/u/0/">
+                                <img src="css/images/Notice.png">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://docs.google.com/document/u/0/">
+                                <img src="css/images/Wordl.png">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://docs.google.com/document/u/0/">
+                                <img src="css/images/Applcation.png">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://docs.google.com/document/u/0/">
+                                <img src="css/images/QnA.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="next" onclick="nextSlide()">&gt;</button> -->
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="https://docs.google.com/document/u/0/">
+                            <img src="css/images/Notice.png">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://docs.google.com/document/u/0/">
+                            <img src="css/images/Wordl.png">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://docs.google.com/document/u/0/">
+                            <img src="css/images/Applcation.png">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://docs.google.com/document/u/0/">
+                            <img src="css/images/QnA.png">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <!-- Swiper JS -->
+                <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                <!-- Initialize Swiper -->
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                    spaceBetween: 30,
+                    effect: "fade",
+                    loop: true, // 무한 루프 활성화
+                    autoplay: { // 자동 재생 활성화
+                        delay: 6000, // 3초마다 슬라이드 전환
+                        disableOnInteraction: false, // 사용자 상호작용 후에도 자동 재생 유지
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                });
+
+                </script>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <!-- <a id="twitter-widget" class="twitter-timeline" data-width="300" data-height="20vh" href="https://twitter.com/dokgodieinsaeng"></a> -->
+                    <div class="date-wrap">
+                        <div class="date-month">
+                            <span id="month-this">2022.05</span>
+                            <div class="button_wrap">
+                                <button type="button" id="month-prev" class="month-move" data-ym="2022-04-01" onclick=""> < </button>
+                                <button type="button" id="month-next" class="month-move" data-ym="2022-06-01"> > </button>
+                            </div>
+                        </div>
+                        <table class="date-month">
+                            <thead>
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl-month">
+                                <tr>
+                                    <td class="sun"><a>1</a></td>
+                                    <td class=""><a href="/news/schedule?date=2022-05-02">2</a></td>
+                                    <td class=""><a>3</a></td>
+                                    <td class=""><a>4</a></td>
+                                    <td class="today"><a>5</a></td>
+                                    <td class=""><a>6</a></td>
+                                    <td class="sat"><a>7</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="sun"><a>8</a></td>
+                                    <td class=""><a href="/news/schedule?date=2022-05-02">9</a></td>
+                                    <td class=""><a>10</a></td>
+                                    <td class=""><a>11</a></td>
+                                    <td class="today"><a>12</a></td>
+                                    <td class=""><a>13</a></td>
+                                    <td class="sat"><a>14</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="sun"><a>15</a></td>
+                                    <td class=""><a href="/news/schedule?date=2022-05-02">16</a></td>
+                                    <td class=""><a>17</a></td>
+                                    <td class=""><a>18</a></td>
+                                    <td class="today"><a>19</a></td>
+                                    <td class=""><a>20</a></td>
+                                    <td class="sat"><a>21</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="sun"><a>22</a></td>
+                                    <td class=""><a href="/news/schedule?date=2022-05-02">23</a></td>
+                                    <td class=""><a>24</a></td>
+                                    <td class=""><a>25</a></td>
+                                    <td class="today"><a>26</a></td>
+                                    <td class=""><a>27</a></td>
+                                    <td class="sat"><a>28</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="sun"><a>29</a></td>
+                                    <td class=""><a>30</a></td>
+                                    <td class=""><a>31</a></td>
+                                    <td class=""><a></a></td>
+                                    <td class=""><a></a></td>
+                                    <td class=""><a></a></td>
+                                    <td class="sat"></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    의뢰 게시판
+                </div>
+                <div class="box">
+                    <div>
+                        <form action="login.php" method="post">
+                            <input type="text" name="username" placeholder="아이디"><br>
+                            <input type="password" name="password" placeholder="비밀번호"><br>
+                            <button type="submit">로그인</button>
+                        </form>
+                    </div>
+                    <div>
+                        마스토돈 설명서
+                    </div>
+                    <div>
+                        홈페이지 설명서
+                    </div>
+                    <div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 우측 네비게이션 -->
+        <div class="sidebar right">
+            <img src="css/images/logo.png" alt="로고">
+        </div>
+    </div>
+    
+</body>
+
+
+<script>
+    const DEADLINE = new Date(2025, 2, 20, 23, 59);
+
+    function updateDDay(){
+        // 현재 날짜와 시간을 가져오기
+        const currentDate = new Date();
+
+        let diffTime = DEADLINE.getTime() - currentDate.getTime();
+
+        if (diffTime <= 0) {
+            document.getElementById("led").innerText = "신청이 마감되었습니다.";
+            return;
+        }
+        
+        let dDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        let dHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let dMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById("led").innerText = `신청서 접수까지 ${dDays}일 ${dHours}시간 ${dMinutes}분 남았습니다.`;
+
+    }
+    window.onload=function(){
+        updateDDay();
+        setInterval(updateDDay, 60000);
+    }
+
+    let currentIndex = 0; // 현재 슬라이드 위치
+    const totalSlides = document.querySelectorAll(".carousel-item").length; // 슬라이드 개수
+    const carouselInner = document.querySelector(".carousel-inner"); // 움직이는 영역
+
+    function updateCarousel() {
+        carouselInner.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides; // 4장 기준 (0~3)
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // 음수 방지
+        updateCarousel();
+    }
+
+    // 자동 슬라이드 (3초마다 이동)
+    setInterval(nextSlide, 3000);
+
+
+    // 쿠키 확인
+    if (!document.cookie.includes("visited=true")) {
+        // 처음 방문한 경우, 쿠키 저장 후 enter.html로 이동
+        document.cookie = "visited=true; path=/; max-age=86400"; // 24시간 유지
+        window.location.href = "enter.html";
+    }
+
+
+    window.addEventListener("load", function() {
+        setTimeout(function() {
+            let script = document.createElement("script");
+            script.setAttribute("async", "");
+            script.setAttribute("src", "https://platform.twitter.com/widgets.js");
+            script.setAttribute("charset", "utf-8");
+            document.body.appendChild(script);
+        }, 2000); // 2초 후 로드
+    });
+
+    function prevMonth(date) {
+        var target = new Date(date);
+        target.setDate(1);
+        target.setMonth(target.getMonth() - 1);
+
+        return getYmd(target);
+    }
+
+    function nextMonth(date) {
+        var target = new Date(date);
+        target.setDate(1);
+        target.setMonth(target.getMonth() + 1);
+
+        return getYmd(target);
+    }
+
+    function getYmd(target) {
+        // IE에서 날짜 문자열에 0이 없으면 인식 못함
+        var month = ('0' + (target.getMonth() + 1)).slice(-2);
+        return [target.getFullYear(), month, '01'].join('-');
+    }
+
+    function fullDays(date) {
+        var target = new Date(date);
+        var year = target.getFullYear();
+        var month = target.getMonth();
+
+        var firstWeekDay = new Date(year, month, 1).getDay();
+        var thisDays = new Date(year, month + 1, 0).getDate();
+
+        // 월 표시 달력이 가지는 셀 갯수는 3가지 가운데 하나이다.
+        // var cell = [28, 35, 42].filter(n => n >= (firstWeekDay + thisDays)).shift();
+        var cell = [28, 35, 42].filter(function (n) {
+                return n >= (firstWeekDay + thisDays);
+            }).shift();
+
+        // 셀 초기화, IE에서 Array.fill()을 지원하지 않아서 변경
+        // var days = new Array(cell).fill({date: '', dayNum: '', today: false});
+        var days = []
+        for (var i = 0; i < cell; i++) {
+            days[i] = {
+                date: '',
+                dayNum: '',
+                today: false
+            };
+        }
+        
+        var now = new Date();
+        var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        var inDate;
+        for (var index = firstWeekDay, i = 1; i <= thisDays; index++, i++) {
+            inDate = new Date(year, month, i);
+            days[index] = {
+                date: i,
+                dayNum: inDate.getDay(),
+                today: (inDate.getTime() === today.getTime())
+            };
+        }
+
+        return days;
+    }
+
+    function drawMonth(date) {
+        $('#month-this').text(date.substring(0, 7).replace('-', '.'));
+        $('#month-prev').data('ym', prevMonth(date));
+        $('#month-next').data('ym', nextMonth(date));
+
+        $('#tbl-month').empty();
+
+        var td = '<td class="__REST__ __TODAY__"><a __HREF__>__DATE__</a></td>';
+        var href = '/depart/schedule?date=' + date.substring(0, 8);
+        var hasEvent;
+        var tdClass;
+        var week = null;
+        var days = fullDays(date);
+        for (var i = 0, length = days.length; i < length; i += 7) {
+            // 전체 셀을 주단위로 잘라서 사용
+            week = days.slice(i, i + 7);
+            
+            var $tr = $('<tr></tr>');
+            week.forEach(function (obj, index) {
+                // 매주 수요일에 이벤트가 있다고 가정
+                hasEvent = (index === 3);
+                tdClass = (index === 0)? 'sun': '';
+                tdClass = (index === 6)? 'sat': tdClass;
+    
+                $tr.append(td.replace('__REST__', tdClass)
+                            .replace('__TODAY__', (obj['today'])? 'today': '')
+                            .replace('__HREF__', (hasEvent)? 'href="'+ href + ('0' + obj['date']).slice(-2) +'"': '')
+                            .replace('__DATE__', obj['date']));
+            });
+            $('#tbl-month').append($tr);
+        }
+    }
+    
+    $(function () {
+        var date = (new Date()).toISOString().substring(0, 10);
+        drawMonth(date);
+    
+        $('.month-move').on('click', function (e) {
+            e.preventDefault();
+    
+            drawMonth($(this).data('ym'));
+        });
+    });
+
+</script>
+
+
+</html>

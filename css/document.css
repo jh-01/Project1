@@ -1,0 +1,28 @@
+.document{
+    margin-top: 10%;
+    width: 60%;
+    justify-self: center;
+    max-height: 80vh; /* 화면 높이의 80%까지만 */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* 배경색 */
+    color: white;
+    border-radius: 5px;
+    overflow-y: auto; /* 세로 스크롤 허용 */
+    overflow-x: hidden; /* 가로 스크롤 막기 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 약간의 그림자 효과 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
+    -ms-overflow-style: none; /* IE, Edge에서 스크롤바 숨기기 */
+    white-space: pre-wrap; /* 자동 줄바꿈 처리 */
+    text-overflow:clip;
+    word-break:normal;
+}
+
+
+/* Chrome, Safari, Edge를 위한 숨김 처리 */
+.document::-webkit-scrollbar {
+    display: none;
+}
+
+.docu-text{
+    width: 100%;
+}
